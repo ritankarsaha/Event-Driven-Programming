@@ -16,7 +16,7 @@ func main() {
 	app := fiber.New()
 	api := app.Group("/api/v1")
 	api.Post("/comment", createComment)
-	log.Fatal(app.Listen(":3000"))
+	log.Fatal(app.Listen(":3001"))
 }
 
 func ConnectProducer(brokersUrl []string) (sarama.SyncProducer, error) {
